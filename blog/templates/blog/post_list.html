@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> Hello World </title>
-    </head>
-    <body>
-        <p>Hi there!</p>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+        <p>Post List!</p>
         {% for post in posts %}
             <time>published: {{ post.published_date }}</time>
-            <h2><a href="">{{ post.title }}</a></h2>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.text|linebreaksbr }}</p>
         {% endfor %}
-    </body>
-</html>
+{% endblock %}
