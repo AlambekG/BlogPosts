@@ -3,11 +3,16 @@
 A simple blog application built with Django.  
 Users can create, edit, and publish blog posts.
 
+## 🔗 Demo
+
+Live demo: [nerond.pythonanywhere.com](https://nerond.pythonanywhere.com)
+
 ## Features
 
 - List of published posts
 - Post detail view
-- Admin interface for managing content
+- Create/edit posts (via admin interface or frontend form)
+- Publish/unpublish posts
 
 ## Tech Stack
 
