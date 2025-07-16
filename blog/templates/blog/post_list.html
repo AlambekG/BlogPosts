@@ -1,7 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-        <p>Post List!</p>
+        <h2>
+            <a href="{% url 'post_new' %}" class="top-menu">
+                {% include './icons/file-earmark-plus.svg' %}
+            </a>
+        </h2>
+        <p>Post List</p>
         {% for post in posts %}
             <time>published: {{ post.published_date }}</time>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
